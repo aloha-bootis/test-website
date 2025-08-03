@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Battle Toads Gallery</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #111;
+			color: white;
+			margin: 0;
+			padding: 0;
+			overflow-y: scroll;
+		}
+		h1 {
+			text-align: center;
+			padding: 20px;
+			background-color: #222;
+			margin: 0;
+		}
+		.gallery {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+		}
+		.gallery img {
+			width: 80%;
+			max-width: 500px;
+			margin: 20px 0;
+			border: 3px solid #f2431d;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+		}
+	</style>
+</head>
+<body>
+	<h1>Battle Toads Gallery</h1>
+	<div class="gallery" id="gallery"></div>
+
+	<script>
+		// If you know the image names:
+		const images = [
+			"IMG_9343.JPG",
+			"IMG_9345.JPG",
+			"IMG_9346.JPG",
+			"IMG_9347.JPG",
+			"IMG_9351.JPG",
+			"IMG_9352.JPG",
+			"IMG_9353.JPG",
+			"IMG_9355.JPG"
+		];
+
+		const gallery = document.getElementById('gallery');
+		images.forEach(name => {
+			const img = document.createElement('img');
+			img.src = `./riparazione_telefono/${name}`;
+			img.alt = name;
+			gallery.appendChild(img);
+		});
+	</script>
+</body>
+</html>
